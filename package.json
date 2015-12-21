@@ -1,0 +1,18 @@
+{
+  "name": "demographics-client",
+  "version": "0.0.0",
+  "description": "An experimental client-side app for demographics (project stats API)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onmodulus/demographics-client.git"
+  },
+  "author": "Fran Varney <fran@modulus.io>",
+  "bugs": {
+    "url": "https://github.com/onmodulus/demographics-client/issues"
+  },
+  "homepage": "https://github.com/onmodulus/demographics-client#readme"
+}
