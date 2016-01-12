@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/onmodulus/demographics-client#readme",
   "devDependencies": {
-    "webpack": "1.12.11"
+    "webpack": "1.12.11",
+    "webpack-dev-server": "1.14.1"
   }
 }
