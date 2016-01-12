@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rm -rf public",
     "dev": "npm run clean && NODE_ENV=development webpack-dev-server --progress --hot",
+    "postinstall": "cp client/config/example.js client/config/production.js && cp client/config/example.js client/config/development.js",
     "start": "npm run clean && NODE_ENV=production webpack --progress"
   },
   "repository": {
