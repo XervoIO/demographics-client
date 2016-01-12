@@ -27,4 +27,6 @@ build/Release
 node_modules
 
 public
+client/config/development.js
+client/config/production.js
 
