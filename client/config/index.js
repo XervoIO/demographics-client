@@ -5,6 +5,6 @@ import ProductionConfig from './production'
 let EnvConfig
 
 if (__PRODUCTION__) EnvConfig = ProductionConfig
-if (__DEVELOPMENT__) EnvConfig = DevelopmentConfig
+else EnvConfig = DevelopmentConfig
 
 export default Object.assign({}, BaseConfig, EnvConfig)
