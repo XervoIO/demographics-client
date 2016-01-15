@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf public",
-    "dev": "npm run clean && NODE_ENV=development webpack-dev-server --progress --hot",
+    "dev": "npm run clean && NODE_ENV=development webpack-dev-server --progress --hot --inline --history-api-fallback",
     "postinstall": "cp client/config/example.js client/config/production.js && cp client/config/example.js client/config/development.js",
     "start": "npm run clean && NODE_ENV=production webpack --progress"
   },
@@ -27,6 +27,7 @@
     "file-loader": "0.8.5",
     "history": "1.17.0",
     "html-webpack-plugin": "1.7.0",
+    "normalizr": "2.0.0",
     "react": "0.14.6",
     "react-dom": "0.14.6",
     "react-redux": "4.0.6",
