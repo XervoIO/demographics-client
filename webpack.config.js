@@ -19,7 +19,7 @@ var basePlugins = [
   }),
   new HtmlWebpackPlugin({
     template: './client/templates/index.html',
-    inject: 'body',
+    inject: 'body'
   })
 ]
 
