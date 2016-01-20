@@ -1,7 +1,7 @@
-export const RESET_ERROR_MESSAGE = 'RESET_ERROR_MESSAGE'
+import * as ActionTypes from '../constants/ActionTypes'
 
 export function resetErrorMessage() {
   return {
-    type: RESET_ERROR_MESSAGE
+    type: ActionTypes.ERROR_RESET_MESSAGE
   }
 }
