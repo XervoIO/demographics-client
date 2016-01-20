@@ -5,6 +5,8 @@ import {pushState} from 'redux-router'
 import {resetErrorMessage} from '../actions/error'
 import HomePage from './HomePage'
 
+import '../styles/main.scss'
+
 class App extends Component {
   constructor(props) {
     super(props)
