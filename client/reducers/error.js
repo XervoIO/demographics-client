@@ -1,9 +1,9 @@
-import * as ActionTypes from '../actions'
+import * as ActionTypes from '../constants/ActionTypes'
 
 function errorMessage(state = null, action) {
   const {error, type} = action
 
-  if (type === ActionTypes.RESET_ERROR_MESSAGE) {
+  if (type === ActionTypes.ERROR_RESET_MESSAGE) {
     return null
   } else if (error) {
     return error
