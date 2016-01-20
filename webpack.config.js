@@ -1,3 +1,4 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Path = require('path')
 const Webpack = require('webpack')
@@ -15,25 +16,26 @@ function getEntrySources(sources) {
 var basePlugins = [
   new Webpack.DefinePlugin({
     __DEVELOPMENT__: process.env.NODE_ENV !== 'production',
-    __PRODUCTION__: process.env.NODE_ENV === 'production',
+    __PRODUCTION__: process.env.NODE_ENV === 'production'
   }),
   new HtmlWebpackPlugin({
     template: './client/templates/index.html',
     inject: 'body'
-  })
+  }),
+ new ExtractTextPlugin('css/styles.css')
 ]
 
 var devPlugins = [
   new Webpack.HotModuleReplacementPlugin(),
-  new Webpack.NoErrorsPlugin(),
+  new Webpack.NoErrorsPlugin()
 ]
 
 var prodPlugins = [
   new Webpack.optimize.OccurenceOrderPlugin(),
   new Webpack.optimize.UglifyJsPlugin({
     compressor: {
-      warnings: false,
-    },
+      warnings: false
+    }
   })
 ]
 
@@ -56,7 +58,7 @@ module.exports = {
   plugins: PLUGINS,
   module: {
     preLoaders: [
-      { test: /\.js$/, loader: 'source-map-loader' }
+      { test: /\.js$/, loader: 'source-map' }
     ],
     loaders: [
       { test: /\.js$/,
@@ -67,7 +69,8 @@ module.exports = {
           presets: ['es2015', 'react']
         }
       },
-      { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'file?name=img/[name].[ext]' }
+      { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'file?name=img/[name].[ext]' },
+      { test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css!sass') }
     ]
   }
 }
