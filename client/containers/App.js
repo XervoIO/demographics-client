@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react'
 import {connect} from 'react-redux'
 import {pushState} from 'redux-router'
 
-import {resetErrorMessage} from '../actions'
+import {resetErrorMessage} from '../actions/error'
 import HomePage from './HomePage'
 
 class App extends Component {
@@ -37,17 +37,16 @@ class App extends Component {
   }
 
   render() {
-    const {children} = this.props
-
     return (
       <div>
         {this.renderErrorMessage()}
-        {children}
-        <HomePage onChange={this.handleChange} />
+        {this.props.children}
       </div>
     )
   }
 }
+
+App.displayName = 'App'
 
 App.propTypes = {
   // Injected by React Redux
