@@ -1,0 +1,35 @@
+.project-details {
+  .detail {
+    background-color: $white;
+    margin: 15px auto;
+    padding: 15px;
+    width: 100%;
+  }
+
+  .header {
+    border-bottom: 3px solid $background-color;
+    margin-bottom: 10px;
+    padding: 0;
+    width: 100%
+  }
+
+  h3 {
+    color: $tile-header-copy;
+    display: inline-block;
+    font-weight: 600;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+  }
+
+  .description {
+    font-size: 16px;
+
+  }
+
+  .date {
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    line-height: 30px
+  }
+}
