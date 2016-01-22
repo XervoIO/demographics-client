@@ -1,16 +1,24 @@
 import {arrayOf, normalize, Schema} from 'normalizr'
 
-let project = new Schema('projects', { idAttribute: 'name' })
-let version = new Schema('versions', { idAttribute: 'name' })
+let projects = new Schema('projects', { idAttribute: 'name' })
+let versions = new Schema('versions', { idAttribute: 'name' })
 
-version.define({
-  version: version
+versions.define({
+  version: versions
 })
 
+projects.define({
+  project: projects,
+  versions: arrayOf(versions)
+})
+
+let project = new Schema('projects', { idAttribute: 'name' })
+let projectVersions = new Schema('versions', { idAttribute: 'version' })
+
 project.define({
-  project: project,
-  versions: arrayOf(version)
+  projects: project,
+  versions: arrayOf(projectVersions)
 })
 
 export const PROJECT = project
-export const PROJECT_ARRAY = arrayOf(project)
+export const PROJECT_ARRAY = arrayOf(projects)
