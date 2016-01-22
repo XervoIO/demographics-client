@@ -8,6 +8,7 @@ import App from './containers/App'
 import configureStore from './store/configureStore'
 import DevTools from './containers/DevTools'
 import Home from './containers/HomePage'
+import ProjectDetails from './containers/Projects/Details'
 
 const store = configureStore()
 
@@ -17,6 +18,7 @@ let routes = (
       <ReduxRouter>
         <Route path="/" component={App}>
           <IndexRoute component={Home} />
+          <Route path="project/:name" component={ProjectDetails} />
         </Route>
       </ReduxRouter>
       { __DEVELOPMENT__ ? <DevTools /> : null }
