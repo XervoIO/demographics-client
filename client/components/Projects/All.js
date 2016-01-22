@@ -1,13 +1,15 @@
 import React, {Component, PropTypes} from 'react'
 
+import ProjectTile from './Tile'
+
 export default class AllProjects extends Component {
   render() {
     const {projects} = this.props
 
     return (
-      <div>
+      <div className="container-fluid">
         {Object.keys(projects).map((key, index) => {
-          return <p key={index}>{projects[key].name}</p>
+          return <ProjectTile key={index} project={projects[key]} />
         })}
       </div>
     )
@@ -17,7 +19,5 @@ export default class AllProjects extends Component {
 AllProjects.displayName = 'AllProjects'
 
 AllProjects.propTypes = {
-  projects: PropTypes.objectOf(PropTypes.shape({
-    name: PropTypes.string.isRequired
-  }).isRequired).isRequired
+  projects: PropTypes.object.isRequired
 }
