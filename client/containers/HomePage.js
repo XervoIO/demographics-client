@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 
 import DefaultLayout from '../layouts/Default'
 import {fetchProjects} from '../actions/project'
+import Loading from '../components/Layout/Loading'
 import Projects from '../components/Projects/All'
 
 class HomePage extends Component {
@@ -14,12 +15,11 @@ class HomePage extends Component {
     const {projects} = this.props
 
     if (!projects) {
-      return <div>Loading projects...</div>
+      return <DefaultLayout><Loading /></DefaultLayout>
     }
 
     return (
       <DefaultLayout>
-        Home
         <Projects projects={projects} />
       </DefaultLayout>
     )
