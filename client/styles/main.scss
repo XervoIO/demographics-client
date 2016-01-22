@@ -1,16 +1,16 @@
-@import 'config/variables';
 @import 'config/colors';
+@import 'config/variables';
 @import 'config/fonts';
 @import 'config/globals';
 
 // Layouts
-//
+
 
 // Containers
 //
 
 // Components
-//
-
-
-
+@import 'components/layout/header';
+@import 'components/layout/link-button';
+@import 'components/layout/loading';
+@import 'components/projects/tile';

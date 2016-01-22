@@ -1,0 +1,26 @@
+.project-tile {
+  .tile {
+    background-color: $white;
+    margin: 15px auto;
+    padding: 15px;
+    width: 100%;
+  }
+
+  h3 {
+    color: $tile-header-copy;
+    border-bottom: 3px solid $background-color;
+    font-weight: 600;
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    text-transform: uppercase;
+    width: 100%
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+}

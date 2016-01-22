@@ -1,0 +1,27 @@
+header {
+  background-color: $header-background;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  h1 {
+    font-weight: 700;
+    padding: 10px;
+    text-transform: uppercase;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+  }
+
+  a {
+    color: $header-copy;
+    text-decoration: none;
+
+    &:hover {
+      color: $header-hover;
+      text-decoration: none;
+    }
+  }
+}
