@@ -29,4 +29,4 @@ node_modules
 public
 client/config/development.js
 client/config/production.js
-
+.DS_Store
