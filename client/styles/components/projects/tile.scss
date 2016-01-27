@@ -16,8 +16,22 @@
     width: 100%
   }
 
+  // Variables in the .description block
+  $description_font_size: 16px;
+  $description_lin_height: 1.4;
+  $description_line_clamp: 3;
+
   .description {
-    font-size: 16px;
+    display: block;
+    display: -webkit-box;
+    font-size: $description_font_size;
+    height: $description_font_size * $description_lin_height * $description_line_clamp;
+    line-height: $description_lin_height;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $description_line_clamp;
+    -webkit-box-orient: vertical;
   }
 
   .date {
