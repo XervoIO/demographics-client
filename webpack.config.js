@@ -69,8 +69,9 @@ module.exports = {
           presets: ['es2015', 'react']
         }
       },
-      { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'file?name=img/[name].[ext]' },
-      { test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css!sass') }
+      { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'file?name=images/[name].[ext]' },
+      { test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css!sass') },
+      { test: /\.(eot|ttf|woff)$/, loader: 'file?name=font/[name].[ext]' }
     ]
   }
 }
