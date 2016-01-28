@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import LoadingImage from '../../assets/loading.svg'
+import LoadingImage from '../../assets/images/loading.svg'
 
 export default class Loading extends Component {
   render() {
