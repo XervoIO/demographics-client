@@ -18,7 +18,20 @@
     display: inline-block;
     font-weight: 600;
     margin: 0 0 10px;
+    padding-left: 25px;
+    position: relative;
     text-transform: uppercase;
+
+    &:before {
+      bottom: -4px;
+      color: $tile-header-copy;
+      display: inline-block;
+      height: 100%;
+      left: 0;
+      margin-left: -4px;
+      position: absolute;
+      width: auto;
+    }
   }
 
   .description {

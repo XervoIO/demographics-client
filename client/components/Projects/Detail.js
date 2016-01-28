@@ -13,7 +13,7 @@ export default class ProjectDetail extends Component {
         <div className="col-xs-12 col-sm-6">
           <div className="detail">
             <div className="header">
-              <h3>{name}</h3>
+              <h3 className="icon-align-justify">{name}</h3>
               <span className="date"><em>Updated: {DateFormatter(updatedAt)}</em></span>
             </div>
             <p className="description">{description || 'No description entered!'}</p>
