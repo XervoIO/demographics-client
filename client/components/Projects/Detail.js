@@ -13,15 +13,15 @@ export default class ProjectDetail extends Component {
         <div className="col-xs-12 col-sm-6">
           <div className="detail">
             <div className="header">
-              <h3>{name}</h3>
+              <h3 className="icon-align-justify">{name}</h3>
               <span className="date"><em>Updated: {DateFormatter(updatedAt)}</em></span>
             </div>
-            <p className="description">{description || 'No description entered!'}</p>
+            <p className="description">{description || "No description entered!"}</p>
             <p>Maintained by {maintainers.toString().replace(/,/g, ', ')}</p>
             <h5>Has these items:</h5>
             <ul>
-              <li>Linter: {hasLinter ? 'Yep' : 'Nope'}</li>
-              <li>Readme: {hasReadme ? 'Yep' : 'Nope'}</li>
+              <li className={hasLinter ? "icon-check checked" : "icon-check"}>Linter</li>
+              <li className={hasReadme ? "icon-check checked" : "icon-check"}>Readme</li>
             </ul>
           </div>
         </div>

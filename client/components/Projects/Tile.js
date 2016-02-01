@@ -12,7 +12,7 @@ export default class ProjectTile extends Component {
     return (
       <div className="col-xs-12 col-sm-6 col-md-3 project-tile">
         <div className="tile">
-          <h3>{name}</h3>
+          <h3 className="icon-align-justify">{name}</h3>
           <p className="description">{description || 'No description entered!'}</p>
           <p className="date"><em>Last updated on {DateFormatter(updatedAt)}</em></p>
           <LinkButton to={`/project/${name}`} text="View full details" />
